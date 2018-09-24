@@ -12,36 +12,41 @@ var browserSync = require('browser-sync').create();
 var run = require('run-sequence');
 var del = require('del');
 
-// HTML
 
+// HTML
 gulp.task('html', function() {
   return gulp.src('src/*.html')
   .pipe(gulp.dest('build'));
 });
 
-// CSS
-
-gulp.task('style', function() {
-  gulp.src('src/sass/style.scss')
+// COMPILE SCSS
+gulp.task('css:compile', function() {
+  return gulp.src('src/sass/style.scss')
   .pipe(plumber())
   .pipe(sass())
   .pipe(postcss([
     autoprefixer()
   ]))
+  .pipe(gulp.dest('src/css'));
+});
+
+// MINIFY CSS
+gulp.task('css:minify', ['css:compile'], function() {
+  return gulp.src('src/css/*.css')
   .pipe(minify())
-  .pipe(rename('style.min.css'))
+  .pipe(rename({
+    suffix: '.min'
+  }))
   .pipe(gulp.dest('build/css'))
   .pipe(browserSync.stream());
 });
 
-// JS
+// CSS
+gulp.task('css', ['css:compile', 'css:minify']);
 
-gulp.task('js:del', function() {
-  return del('build/js');
-});
-
-gulp.task('js', ['js:del'], function() {
-  gulp.src('src/js/*.js')
+// MINIFY JS
+gulp.task('js:minify', function() {
+  return gulp.src('src/js/*.js')
   .pipe(plumber())
   .pipe(uglify()) 
   .pipe(rename({
@@ -51,47 +56,42 @@ gulp.task('js', ['js:del'], function() {
   .pipe(browserSync.stream());
 });
 
-// CLEAN
+// JS
+gulp.task('js', ['js:minify']);
 
+// CLEAN
 gulp.task('clean', function() {
   return del('build');
 });
 
 // COPY FONTS
-
 gulp.task('copy:fonts', function() {
   return gulp.src('src/fonts/**/*.*')
   .pipe(gulp.dest('build/fonts'));
 });
 
 // COPY IMAGES
-
 gulp.task('copy:images', function() {
   return gulp.src('src/img/**/*.*')
   .pipe(gulp.dest('build/img'));
 });
 
 // COPY
-
-gulp.task('copy', function(done) {
-	run('copy:fonts', 'copy:images', done)
-});
+gulp.task('copy', ['copy:fonts', 'copy:images']);
 
 // BUILD
-
 gulp.task('build', function(done) {
   run(
     'clean',
-    'copy',
-    'style',
-    'js',
     'html',
+    'css',
+    'js',
+    'copy',
     done
   )
 });
 
 // SERVER
-
 gulp.task('server', function() {
 	browserSync.init({
 		proxy: 'creative/',
@@ -99,6 +99,6 @@ gulp.task('server', function() {
 	});
 
 	gulp.watch('src/*.html', ['html']).on('change', browserSync.reload);
-	gulp.watch('src/sass/**/*.scss', ['style']).on('change', browserSync.reload);
+	gulp.watch('src/sass/**/*.scss', ['css']).on('change', browserSync.reload);
 	gulp.watch('src/js/**/*.js', ['js']).on('change', browserSync.reload);
 });
