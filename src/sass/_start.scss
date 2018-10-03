@@ -1,0 +1,7 @@
+.start {
+	background-color: $primary;
+
+	&__title {
+		@include line(1.5rem, $white);
+	}
+}

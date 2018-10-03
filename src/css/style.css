@@ -22,6 +22,9 @@ a {
 .text-faded {
   color: rgba(255, 255, 255, 0.7); }
 
+.py-section {
+  padding: 8rem 0; }
+
 .navbar {
   font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
   transition: all 0.2s;
@@ -123,3 +126,13 @@ a {
     background-color: #ee4b28 !important; }
   .btn-primary:focus, .btn-primary:active {
     box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important; }
+
+.start {
+  background-color: #F05F40; }
+  .start__title::after {
+    content: "";
+    display: block;
+    max-width: 50px;
+    height: 3px;
+    margin: 1.5rem auto;
+    background-color: #fff; }
