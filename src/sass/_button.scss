@@ -1,0 +1,27 @@
+.btn {
+	padding: 1rem 2rem;
+
+	font-weight: 700;
+	text-transform: uppercase;
+
+	font-family: 'Open Sans', "Helvetica Neue", Helvetica, sans-serif;
+
+	border: none;
+	border-radius: 100px;
+}
+
+.btn-primary {
+	background-color: $primary;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $white;
+		background-color: darken($primary, 5%) !important;
+	}
+
+  &:focus,
+	&:active {
+		box-shadow: 0 0 0 0.2rem rgba(240, 95, 64,.5) !important;
+	}
+}

@@ -1,0 +1,41 @@
+.header {
+	padding-top: 10rem;
+	padding-bottom: calc(10rem - 56px);
+
+	background-image: url('../img/header.jpg');
+	background-position: center center;
+	background-size: cover;
+
+	@media (min-width: 992px) {
+		display: flex;
+		align-items: center;
+		height: 100vh;
+		min-height: 650px;
+
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	&__title {
+		@include line(30px);
+		font-size: 2rem;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		@media (min-width: 992px) {
+			font-size: 3rem;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 4rem;
+		}
+	}
+
+	&__text {
+		font-weight: 300;
+
+		@media (min-width: 768px) {
+			font-size: 1.15rem;
+		}
+	}
+}

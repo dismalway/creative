@@ -1,0 +1,82 @@
+.navbar {
+	@include sans-serif-font;
+	@include transition-all;
+	font-weight: 700;
+	text-transform: uppercase;
+
+	background-color: $white;
+	border-bottom: 1px solid rgba($gray-900, .1);
+
+	@media (min-width: 992px) {
+		background-color: transparent;
+		border-bottom: transparent;
+	}
+
+	.navbar-brand {
+		color: $primary;
+
+		&:focus,
+		&:hover {
+			color: $primary;
+		}
+
+		@media (min-width: 992px) {
+			color: rgba($white, .7);
+
+			&:focus,
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+
+	&.navbar-shrink {
+		@media (min-width: 992px) {
+			background-color: $white;
+			border-bottom: 1px solid rgba($gray-900, .1);
+
+			.navbar-brand {
+				color: $primary;
+			}
+
+			.navbar-nav > .nav-item > .nav-link {
+				color: $gray-900;
+				
+				&:focus {
+					color: $gray-900;
+				}
+				
+				&:hover {
+					color: $primary;
+				}
+			}
+		}	
+	}
+}
+
+.navbar-nav > .nav-item > .nav-link {
+	font-size: 0.9rem;
+	color: $gray-900;
+
+	&:focus {
+		color: $gray-900;
+	}
+	
+	&:hover {
+		color: $primary;
+	}
+
+	@media (min-width: 992px) {
+		padding: 0.5rem 1rem;
+
+		color: rgba($white, .7);
+
+		&:focus {
+			color: rgba($white, .7);
+		}
+		
+		&:hover {
+			color: $white;
+		}
+	}
+}
