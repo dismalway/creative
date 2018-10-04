@@ -1,0 +1,19 @@
+.contact {
+
+	&__title {
+		@include line();
+	}
+
+	&__text {
+		color: $gray-800;
+	}
+
+	&__link {
+		color: $primary;
+
+		&:hover,
+		&:focus {
+			color: $primary;
+		}
+	}
+}
