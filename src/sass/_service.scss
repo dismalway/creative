@@ -1,0 +1,16 @@
+.service {
+
+	&__title {
+		@include line(1.5rem, $primary);
+	}
+
+	&__description {
+		margin-bottom: 0;
+	}
+
+	&__item {
+		.fas {
+			color: $primary;
+		}
+	}
+}

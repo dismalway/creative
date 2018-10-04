@@ -136,3 +136,17 @@ a {
     height: 3px;
     margin: 1.5rem auto;
     background-color: #fff; }
+
+.service__title::after {
+  content: "";
+  display: block;
+  max-width: 50px;
+  height: 3px;
+  margin: 1.5rem auto;
+  background-color: #F05F40; }
+
+.service__description {
+  margin-bottom: 0; }
+
+.service__item .fas {
+  color: #F05F40; }
