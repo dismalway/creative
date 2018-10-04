@@ -186,3 +186,6 @@ a {
   @media (min-width: 768px) {
     .portfolio__project {
       font-size: 22px; } }
+
+.download {
+  background-color: #212529; }
