@@ -150,3 +150,39 @@ a {
 
 .service__item .fas {
   color: #F05F40; }
+
+.portfolio__item {
+  position: relative;
+  display: block; }
+
+.portfolio__content {
+  font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+  transition: all 0.2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0; }
+  .portfolio__content:hover, .portfolio__content:focus {
+    background-color: rgba(240, 95, 64, 0.9);
+    opacity: 1; }
+
+.portfolio__category {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    .portfolio__category {
+      font-size: 16px; } }
+
+.portfolio__project {
+  font-size: 18px;
+  color: #fff; }
+  @media (min-width: 768px) {
+    .portfolio__project {
+      font-size: 22px; } }

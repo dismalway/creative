@@ -14,3 +14,19 @@ function navbarCollapse() {
 navbarCollapse();
 
 window.onscroll = navbarCollapse;
+
+
+$('.popup-gallery').magnificPopup({
+  delegate: 'a',
+  type: 'image',
+  tLoading: 'Загрузка...',
+  closeOnContentClick: true,
+  image: {
+    verticalFit: false
+  },
+  gallery: {
+    enabled: true
+  }
+});
+
+
