@@ -17,7 +17,7 @@
 	<link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
 		<div class="container">
 			<a class="navbar-brand" href="#">Start Bootstrap</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -26,16 +26,16 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
       	<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="">About</a>
+						<a class="nav-link" href="#about">About</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="">Services</a>
+						<a class="nav-link" href="#services">Services</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="">Portfolio</a>
+						<a class="nav-link" href="#portfolio">Portfolio</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="">Contact</a>
+						<a class="nav-link" href="#contact">Contact</a>
 					</li>
 				</ul>
       </div>	
@@ -58,7 +58,7 @@
 		</div>		
 	</header>
 
-	<section class="start py-section">
+	<section class="start py-section" id="about">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 mx-auto">
@@ -74,7 +74,7 @@
 		</div>
 	</section>
 
-	<section class="service py-section">
+	<section class="service py-section" id="services">
 		<div class="container">
 			<div class="row">
 				<div class="col mx-auto text-center">
@@ -84,28 +84,28 @@
 			<div class="row text-center">
 				<div class="col-lg-3 col-md-6">
 					<div class="service__item mt-5">
-						<i class="fas fa-4x fa-gem mb-3"></i>
+						<i class="fas fa-4x fa-gem mb-3 sr-icon-1"></i>
 						<h3 class="service__heading mb-3">Sturdy Templates</h3>
 						<p class="service__description text-muted">Our templates are updated regularly so they don't break.</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="service__item mt-5">
-						<i class="fas fa-4x fa-paper-plane mb-3"></i>
+						<i class="fas fa-4x fa-paper-plane mb-3 sr-icon-2"></i>
 						<h3 class="service__heading mb-3">Ready to Ship</h3>
 						<p class="service__description text-muted">You can use this theme as is, or you can make changes!</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="service__item mt-5">
-						<i class="fas fa-4x fa-code mb-3"></i>
+						<i class="fas fa-4x fa-code mb-3 sr-icon-3"></i>
 						<h3 class="service__heading mb-3">Up to Date</h3>
 						<p class="service__description text-muted">We update dependencies to keep things fresh.</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="service__item mt-5">
-						<i class="fas fa-4x fa-heart mb-3"></i>
+						<i class="fas fa-4x fa-heart mb-3 sr-icon-4"></i>
 						<h3 class="service__heading mb-3">Made with Love</h3>
 						<p class="service__description text-muted">You have to make your websites with love these days!</p>
 					</div>
@@ -114,7 +114,7 @@
 		</div>
 	</section>
 
-	<section class="portfolio">
+	<section class="portfolio" id="portfolio">
 		<div class="container-fluid p-0">
 			<div class="row no-gutters popup-gallery">
 				<div class="col-lg-4 col-sm-6">
@@ -205,14 +205,14 @@
 				<div class="col-lg-8 mx-auto">
 					<div class="download__content text-center">
 						<h2 class="download__title text-white mb-4">Free Download at Start Bootstrap!</h2>
-						<a class="btn btn-light" href="">Download Now!</a>
+						<a class="btn btn-light sr-button" href="">Download Now!</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="contact py-section">
+	<section class="contact py-section" id="contact">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 mx-auto">
@@ -226,11 +226,11 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-4 text-center ml-auto">
-					<i class="fas fa-phone fa-3x mb-3"></i>
+					<i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
 					<p class="contact__phone">123-456-6789</p>
 				</div>
 				<div class="col-lg-4 text-center mr-auto">
-					<i class="fas fa-envelope fa-3x mb-3"></i>
+					<i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
 					<p class="contact__email">
 						<a class="contact__link" href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a>
 					</p>
@@ -242,6 +242,7 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/magnific-popup.min.js"></script>
+	<script src="js/scrollreveal.min.js"></script>
 	<script src="js/common.min.js"></script>
 </body>
 </html>

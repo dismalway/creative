@@ -9,6 +9,8 @@ html {
 
 body {
 	@include serif-font;
+
+	position: relative;
 }
 
 h1, 

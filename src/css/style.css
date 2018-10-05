@@ -6,7 +6,8 @@ html {
   font-weight: 400; }
 
 body {
-  font-family: 'Merriweather', 'Helvetica Neue', 'Arial', sans-serif; }
+  font-family: 'Merriweather', 'Helvetica Neue', 'Arial', sans-serif;
+  position: relative; }
 
 h1,
 h2,
@@ -56,6 +57,8 @@ a {
         .navbar.navbar-shrink .navbar-nav > .nav-item > .nav-link:focus {
           color: #212529; }
         .navbar.navbar-shrink .navbar-nav > .nav-item > .nav-link:hover {
+          color: #F05F40; }
+        .navbar.navbar-shrink .navbar-nav > .nav-item > .nav-link.active {
           color: #F05F40; } }
 
 .navbar-nav > .nav-item > .nav-link {
@@ -64,6 +67,8 @@ a {
   .navbar-nav > .nav-item > .nav-link:focus {
     color: #212529; }
   .navbar-nav > .nav-item > .nav-link:hover {
+    color: #F05F40; }
+  .navbar-nav > .nav-item > .nav-link.active {
     color: #F05F40; }
   @media (min-width: 992px) {
     .navbar-nav > .nav-item > .nav-link {
